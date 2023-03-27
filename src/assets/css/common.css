@@ -1,0 +1,41 @@
+:root {
+    /* 全局修改，任何地方只要用到以下变量都会被修改掉 */
+    --primary-color: #ff9854;
+    /* 全局修改，修改search的样式 */
+    /* 根据vant里面提供的样式，对搜索的图标进行全局修改 */
+    --van-search-left-icon-color: var(--primary-color) !important;
+
+    --van-tabs-bottom-bar-color: var(--primary-color) !important;
+    --theme-linear-gradient: linear-gradient(90deg, #fa8c1d, #fcaf3f);
+    /* 改变主题色 */
+    --van-primary-color: var(--primary-color) !important;
+}
+
+body {
+    font-size: 14px;
+
+}
+
+/* 隐藏tab-bar */
+.top-page {
+    /* 使用相对定位可以设置z-index使得city盒子在导航栏上方
+     并且设置一个背景颜色，使得背景被遮盖住 */
+    position: relative;
+    z-index: 9;
+    background-color: #fff;
+    /* 设置整个city的高度为视口高度那么高 */
+    height: 100vh;
+    /* 控制页面在city盒子的范围内滑动，如果不设置这个，那么滑出100vh之后会显露出tabBar */
+    overflow-y: auto;
+}
+
+.bottom-gray-line {
+    border-bottom: 1px solid #f2f2f2
+}
+
+.icon_check {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: url(../img/detail/icon_check.png) 0 0/100% 100%;
+}
